@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/huywhomustnotbenamed/meanapp/issues"
   },
-  "homepage": "https://github.com/huywhomustnotbenamed/meanapp"
+  "homepage": "https://github.com/huywhomustnotbenamed/meanapp",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "webpack": "^1.12.13",
+    "webpack-dev-server": "^1.14.1"
+  }
 }
