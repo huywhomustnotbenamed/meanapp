@@ -1,5 +1,5 @@
-angular.module('myApp', [])
-  .controller('meetupsCtrl', function($scope) {
+angular.module('myApp')
+  .controller('meetupsCtrl', ['$scope', '$resource', function($scope, $resource) {
     $scope.meetups = [
       {name: 'Ruby Rails'}
     ];
@@ -8,4 +8,4 @@ angular.module('myApp', [])
       $scope.meetups.push({name: $scope.meetupName})
       $scope.meetupName = "";
     };
-  });
+  }]);
