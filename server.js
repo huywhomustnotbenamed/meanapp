@@ -6,8 +6,10 @@ var meetupsController = require('./server/controllers/meetups-controllers.js');
 
 app.use(bodyParser());
 
+mongoose.connect('mongodb://localhost:27017/mean-demo');
+
 app.get('/', function(req, res){
-  res.sendfile(__dirname + '/client/views/index.html')
+  res.sendFile(__dirname + '/client/views/index.html')
 });
 
 app.post('/api/meetups', meetupsController.create);
