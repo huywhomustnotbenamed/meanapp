@@ -2,6 +2,10 @@ angular.module('myApp')
   .controller('meetupsCtrl', ['$scope', '$resource', function($scope, $resource) {
     var Meetup = $resource('/api/meetups');
 
+    Meetup.query(function(results){
+      $scope.meetups = results;
+    });
+
     $scope.meetups = [];
 
     $scope.createMeetup = function(){
@@ -9,6 +13,7 @@ angular.module('myApp')
       meetup.name = $scope.meetupName;
       meetup.$save(function(result){
         $scope.meetups.push(result);
+        $scope.meetupName = "";
       });
     };
   }]);
